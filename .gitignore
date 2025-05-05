@@ -1,0 +1,56 @@
+
+# Node.js dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# dotenv environment files
+.env
+.env.*
+
+# Logs
+logs
+*.log
+log.txt
+
+# OS / Editor junk
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Coverage and test output
+coverage/
+*.lcov
+
+# Build output
+dist/
+build/
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+terraform.tfvars
+terraform.tfvars.json
+crash.log
+override.tf
+override.tf.json
+*.backup
+*.plan
+
+# Optional: local SSH or AWS credentials
+*.pem
+*.key
+.aws/
+
+# Local tooling
+.envrc
