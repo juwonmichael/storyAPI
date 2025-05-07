@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: my-story-api
-Spec:
+spec:
   replicas: 2
   selector:
     matchLabels:
@@ -16,8 +16,14 @@ Spec:
         - name: my-story-api
           image: michaelbab/my-story-api:latest
           ports:
-            - containerPort: 8080
-        
+            - containerPort: 3000
+          volumeMounts:
+            - name: my-story-api-volume
+              mountPath: /app/data
+      volumes:
+        - name: my-story-api-volume
+          emptyDir: {}
+      
 
 ---
 apiVersion: v1
@@ -30,7 +36,7 @@ spec:
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 8080
+      targetPort: 3000
   type: LoadBalancer        
 
 
